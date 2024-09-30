@@ -1,0 +1,31 @@
+{
+  "name": "com.cordovareact",
+  "homepage": "./",
+  "displayName": "CordovaReact",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "react-app": "cd react-app && npm run build && cd .. && rm -rf www && mkdir www && cp -r react-app/build/* www"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "^13.0.0"
+  },
+  "cordova": {
+    "platforms": [
+      "android"
+    ]
+  },
+  "dependencies": {
+    "@awesome-cordova-plugins/core": "^6.3.0",
+    "@awesome-cordova-plugins/web-intent": "^6.3.0",
+    "com-darryncampbell-cordova-plugin-intent": "^2.2.0",
+    "rxjs": "^7.8.1"
+  }
+}
