@@ -7,7 +7,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "react-app": "cd react-app && npm run build && cd .. && rm -rf www && mkdir www && cp -r react-app/build/* www"
+    "react-app": "cd react-app && npm run build && cd .. && rm -rf www && mkdir www && cp -r react-app/build/* www",
+    "android": "npm run react-app && cordova run android --device --buildConfig"
   },
   "keywords": [
     "ecosystem:cordova"
@@ -15,12 +16,17 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "devDependencies": {
-    "cordova-android": "^13.0.0"
+    "cordova-android": "^13.0.0",
+    "cordova-compass-utils-plugin": "file:cordova-compass-utils-plugin"
   },
   "cordova": {
     "platforms": [
       "android"
-    ]
+    ],
+    "plugins": {
+      "com-darryncampbell-cordova-plugin-intent": {},
+      "cordova-compass-utils-plugin": {}
+    }
   },
   "dependencies": {
     "@awesome-cordova-plugins/core": "^6.3.0",

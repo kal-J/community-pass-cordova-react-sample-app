@@ -5,14 +5,14 @@
       "storePassword": "android",
       "alias": "androiddebugkey",
       "password": "android",
-      "keystoreType": "jks"
+      "keystoreType": ""
     },
     "release": {
       "keystore": "./com.tiv.cp.keystore",
       "storePassword": "android",
       "alias": "androiddebugkey",
       "password": "android",
-      "keystoreType": "jks"
+      "keystoreType": ""
     }
   }
 }

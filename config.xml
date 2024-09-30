@@ -9,12 +9,14 @@
     <content src="index.html" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
-    <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/uses-permission"
+    <platform name="android">
+
+        <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/uses-permission"
         xmlns:android="http://schemas.android.com/apk/res/android">
         <uses-permission
             android:name="com.mastercard.compass.bridgera.permission.BRIDGE_RELIANT_SECURITY" />
     </edit-config>
-    <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/intent-filter"
+    <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application/activity"
         xmlns:android="http://schemas.android.com/apk/res/android">
         <intent-filter>
             <action android:name="com.darryncampbell.cordova.plugin.intent.ACTION" />
@@ -22,4 +24,7 @@
         </intent-filter>
 
     </edit-config>
+
+    </platform>
+    
 </widget>
